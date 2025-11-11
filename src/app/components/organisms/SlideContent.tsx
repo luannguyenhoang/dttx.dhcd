@@ -32,8 +32,11 @@ const SlideContent = ({
   isAnimating
 }: SlideContentProps) => {
   // Chỉ load ảnh cho slide hiện tại và slide tiếp theo
-  const shouldLoad = index === currentSlide || index === currentSlide + 1 || (currentSlide === 0 && index === 1);
-  
+  const shouldLoad =
+    index === currentSlide ||
+    index === currentSlide + 1 ||
+    (currentSlide === 0 && index === 1);
+
   return (
     <div
       key={index}

@@ -1,9 +1,10 @@
 import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
-import { registerApolloClient } from "@apollo/experimental-nextjs-app-support";
+import { registerApolloClient } from "@apollo/client-integration-nextjs";
 import { setContext } from "@apollo/client/link/context";
 
 const API_GRAPHQL =
-  process.env.NEXT_PUBLIC_API_GRAPHQL_DTTXDHCD || "http://10.10.51.16:8090/graphql";
+  process.env.NEXT_PUBLIC_API_GRAPHQL_DTTXDHCD ||
+  "http://10.10.51.16:8090/graphql";
 const API_TOKEN = process.env.TOKEN || "";
 
 const httpLink = new HttpLink({
