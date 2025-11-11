@@ -12,11 +12,15 @@ export const CampusWelcome = ({ data }: { data?: any }) => {
         src={welcomeData?.image?.node?.mediaItemUrl || "/image1.png"}
         className="hidden lg:block"
         alt="Hình ảnh khuôn viên trường đại học"
-        width={0}
-        height={0}
-        sizes="100vw"
+        width={1920}
+        height={800}
+        sizes="(max-width: 1024px) 0px, 100vw"
         style={{ width: "100%", height: "auto" }}
         priority
+        fetchPriority="high"
+        quality={60}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
       />
       <div className="lg:absolute top-0 left-0 w-full h-full flex items-center">
         <div className="max-w-7xl mx-auto">

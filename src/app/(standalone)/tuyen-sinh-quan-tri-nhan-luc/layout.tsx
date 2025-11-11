@@ -6,11 +6,7 @@ import { ReactNode } from "react";
 
 export const revalidate = 0;
 
-interface Props {
-  params: Promise<{ slug: string }>;
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const variables = { uri: "tuyen-sinh-quan-tri-nhan-luc" };
 
   const { seo } = await getSeoData(GET_LADI_PAGE, "pageBy", [], variables);

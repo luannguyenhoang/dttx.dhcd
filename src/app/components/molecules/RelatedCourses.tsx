@@ -54,6 +54,11 @@ export const RelatedCourses = ({ data }: { data: IndustryGroup[] }) => {
           spaceBetween={24}
           slidesPerView={2}
           loop={true}
+          observer={true}
+          observeParents={true}
+          watchOverflow={true}
+          updateOnWindowResize={true}
+          resizeObserver={true}
           breakpoints={{
             0: {
               slidesPerView: 1,
